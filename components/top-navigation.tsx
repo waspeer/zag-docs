@@ -21,6 +21,7 @@ export function TopNavigation() {
       py="4"
       borderBottomWidth="1px"
       borderBottomColor="gray.100"
+      overflowX="hidden"
       _dark={{
         borderBottomColor: "gray.700",
         bg: "rgba(26, 32, 44, 0.92)",
@@ -43,6 +44,7 @@ export function TopNavigation() {
             fontSize="xs"
             letterSpacing="wider"
             fontWeight="semibold"
+            display={{ base: "none", sm: "block"}}
             _dark={{
               borderBottomColor: "gray.700",
               bg: "orange.900",

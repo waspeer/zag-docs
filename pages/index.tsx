@@ -125,6 +125,7 @@ export default function Home() {
         bg={{ base: "green.100", md: "unset" }}
         layerStyle="contain"
         my={{ base: "20", md: "32" }}
+        _dark={{ bg: "green.900" }}
       >
         <Box
           bg="green.100"

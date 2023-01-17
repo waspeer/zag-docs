@@ -70,7 +70,7 @@ export function Playground(props: PlaygroundProps) {
         flexBasis="1px"
         alignSelf="stretch"
         bg="gray.200"
-        _dark={{ bg: "gray-700" }}
+        _dark={{ bg: "gray.700" }}
       />
 
       <Box width={{ md: "240px" }} fontSize="sm" hidden={isEmpty}>
