@@ -21,6 +21,10 @@ export function TopNavigation() {
       py="4"
       borderBottomWidth="1px"
       borderBottomColor="gray.100"
+      _dark={{
+        borderBottomColor: "gray.700",
+        bg: "rgba(26, 32, 44, 0.92)",
+      }}
     >
       <Flex
         align="center"
@@ -39,6 +43,11 @@ export function TopNavigation() {
             fontSize="xs"
             letterSpacing="wider"
             fontWeight="semibold"
+            _dark={{
+              borderBottomColor: "gray.700",
+              bg: "orange.900",
+              color: "orange.300",
+            }}
           >
             BETA
           </Badge>

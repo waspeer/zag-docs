@@ -12,11 +12,17 @@ export const globalStyles: SystemStyleObject = {
     textRendering: "geometricprecision",
     textSizeAdjust: "100%",
     WebkitFontSmoothing: "antialiased",
+    _dark: {
+      bg: "gray.800",
+    },
   },
 
   "*": {
     borderColor: "gray.200",
     borderStyle: "solid",
+    _dark: {
+      borderColor: "gray.600",
+    },
   },
 
   ".focus-outline": {

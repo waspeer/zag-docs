@@ -21,6 +21,10 @@ export function NumberInput(props: any) {
           height="10"
           pr="5"
           pl="3"
+          _dark={{
+            borderColor: "gray.700",
+            bg: "gray.800",
+          }}
           {...api.inputProps}
         />
         <chakra.div
@@ -34,7 +38,7 @@ export function NumberInput(props: any) {
         >
           <chakra.button
             width="full"
-            bg="gray.100"
+            _dark={{ bg: "gray.700" }}
             display="flex"
             justifyContent="center"
             _disabled={{ opacity: 0.5 }}
@@ -45,7 +49,7 @@ export function NumberInput(props: any) {
           <chakra.button
             mt="2px"
             width="full"
-            bg="gray.100"
+            _dark={{ bg: "gray.700" }}
             display="flex"
             justifyContent="center"
             _disabled={{ opacity: 0.5 }}

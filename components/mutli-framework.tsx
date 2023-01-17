@@ -7,26 +7,33 @@ import { ReactIcon, SolidIcon, VueIcon } from "./icons"
 import { NumberInput } from "./machines/number-input"
 import { Playground } from "./playground"
 
-const FrameworkButton = chakra("button", {
-  baseStyle: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "120px",
-    height: "120px",
-    rounded: "md",
-    borderWidth: "1px",
-    bg: "white",
-    _selected: {
-      bg: "green.50",
-      borderBottomWidth: "4px",
-      borderBottomColor: "green.500",
-    },
-  },
-})
-
 export function MultiframeworkTabs() {
   const [state, send] = useMachine(tabs.machine({ id: "m2", value: "react" }))
+
+  const FrameworkButton = chakra("button", {
+    baseStyle: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "120px",
+      height: "120px",
+      rounded: "md",
+      borderWidth: "1px",
+      _selected: {
+        bg: "green.50",
+        borderBottomWidth: "4px",
+        borderBottomColor: "green.500",
+        _dark: {
+          bg: "green.900",
+          borderBottomColor: "green.500",
+        },
+      },
+      _dark: {
+        borderColor: "gray.600",
+        bg: "gray.800",
+      },
+    },
+  })
 
   const api = tabs.connect(state, send, normalizeProps)
   return (
@@ -65,6 +72,9 @@ export function MultiframeworkTabs() {
           flex="1"
           rounded="xl"
           overflow="hidden"
+          _dark={{
+            bg: "gray.900",
+          }}
           {...api.contentGroupProps}
         >
           <Box {...api.getContentProps({ value: "react" })}>

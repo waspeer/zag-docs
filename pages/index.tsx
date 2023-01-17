@@ -126,7 +126,12 @@ export default function Home() {
         layerStyle="contain"
         my={{ base: "20", md: "32" }}
       >
-        <Box bg="green.100" px={{ md: "20" }} py={{ base: "10", md: "20" }}>
+        <Box
+          bg="green.100"
+          px={{ md: "20" }}
+          py={{ base: "10", md: "20" }}
+          _dark={{ bg: "green.900" }}
+        >
           <chakra.h2 textStyle="display.xl" mb="8" maxW="24ch">
             Zag provides the component API for the Web
           </chakra.h2>
@@ -212,6 +217,9 @@ export default function Home() {
               shadow="base"
               height="full"
               position="relative"
+              _dark={{
+                bg: "gray.900",
+              }}
             >
               <CodeArea slug="website/snippet" />
             </Box>
@@ -251,27 +259,37 @@ export default function Home() {
               layerStyle="blockquote"
               fontWeight="semibold"
               borderLeft="2px"
+              borderColor="gray.200"
               borderLeftColor="green.500"
+              bg="green.50"
+              _dark={{
+                borderColor: "gray.600",
+                bg: "green.900",
+                borderLeftColor: "green.500",
+              }}
             >
               We need a better way to model component logic.
             </chakra.blockquote>
-            <mark>Zag is a new approach</mark> to the component design process,
-            designed to help you avoid re-inventing the wheel and build better
-            UI components regardless of framework. Heavily inspired by XState,
-            but built to make it easier to maintain, test, and enhance.
+            <chakra.mark color="currentColor">
+              Zag is a new approach
+            </chakra.mark>{" "}
+            to the component design process, designed to help you avoid
+            re-inventing the wheel and build better UI components regardless of
+            framework. Heavily inspired by XState, but built to make it easier
+            to maintain, test, and enhance.
             <br /> <br />
             With Zag, we're abstracting the complex logic for many components
             into a cohesive, framework-agnostic system — giving you complete
             control over styling and providing a thin adapter for your favorite
             framework.
             <br /> <br />
-            <mark>
+            <chakra.mark color="currentColor">
               Welcome to the future of building interactive components!
-            </mark>
+            </chakra.mark>
           </chakra.div>
 
           <HStack mt="10" spacing="4">
-            <Circle overflow="hidden" bg="gray.100">
+            <Circle overflow="hidden" bg="gray.100" _dark={{ bg: "gray.700" }}>
               <Image
                 src="/segun-adebayo-headshot.png"
                 width="64px"
@@ -296,8 +314,18 @@ export default function Home() {
         bg={{ base: "green.100", md: "unset" }}
         layerStyle="contain"
         my={{ base: "20", md: "32" }}
+        _dark={{
+          bg: { base: "green.900", md: "unset" },
+        }}
       >
-        <Box bg="green.100" px={{ md: "20" }} py={{ base: "10", md: "20" }}>
+        <Box
+          bg="green.100"
+          px={{ md: "20" }}
+          py={{ base: "10", md: "20" }}
+          _dark={{
+            bg: "green.900",
+          }}
+        >
           <chakra.h2 textStyle="display.xl" mb="8" maxW="24ch">
             Build your design system with state machines today
           </chakra.h2>

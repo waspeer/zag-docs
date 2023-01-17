@@ -45,6 +45,9 @@ export function Playground(props: PlaygroundProps) {
       borderWidth="1px"
       minHeight="24em"
       my="16"
+      _dark={{
+        borderColor: "gray.700",
+      }}
     >
       <Flex
         align="flex-start"
@@ -54,11 +57,21 @@ export function Playground(props: PlaygroundProps) {
         flex="1"
         bgImage="radial-gradient(circle,var(--colors-gray-200) 1px, transparent 1px);"
         bgSize="16px 16px"
+        _dark={{
+          bg: "gray.900",
+          bgImage:
+            "radial-gradient(circle,var(--colors-gray-700) 1px, transparent 1px);",
+        }}
       >
         <Comp controls={state} />
       </Flex>
 
-      <Box flexBasis="1px" alignSelf="stretch" bg="gray.200" />
+      <Box
+        flexBasis="1px"
+        alignSelf="stretch"
+        bg="gray.200"
+        _dark={{ bg: "gray-700" }}
+      />
 
       <Box width={{ md: "240px" }} fontSize="sm" hidden={isEmpty}>
         <Header>Properties</Header>

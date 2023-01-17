@@ -21,6 +21,10 @@ export const SearchTrigger = forwardRef(
         ring="1px"
         ringColor="gray.200"
         color="gray.500"
+        _dark={{
+          bg: "gray.800",
+          ringColor: "gray.600",
+        }}
       >
         <Icon as={HiOutlineSearch} fontSize="md" />
         Quick search...

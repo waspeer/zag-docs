@@ -19,6 +19,11 @@ pre[class*="language-"] {
   font-size: 14px;
 }
 
+[data-theme="dark"] code[class*="language-"],
+[data-theme="dark"] pre[class*="language-"] {
+  background: #171923;
+}
+
 /* Selection */
 code[class*="language-"]::selection,
 code[class*="language-"] *::selection,
@@ -52,6 +57,14 @@ pre[class*="language-"] {
 .token.punctuation,
 .token.entity {
   color: hsl(230, 8%, 24%);
+}
+
+[data-theme="dark"] code[class*="language-"],
+[data-theme="dark"] pre[class*="language-"],
+[data-theme="dark"] .token.doctype,
+[data-theme="dark"] .token.punctuation,
+[data-theme="dark"] .token.entity {
+  color: white;
 }
 
 .token.attr-name,

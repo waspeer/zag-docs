@@ -12,7 +12,13 @@ const blockquote: SystemStyleObject = {
   paddingY: "3",
   bg: "green.50",
   borderWidth: "1px",
+  borderLeftColor: "green.500",
+  borderLeftWidth: "2px",
   rounded: "4px",
+  _dark: {
+    bg: "green.900",
+    borderLeftColor: "green.500",
+  },
 }
 
 const inlineCode: SystemStyleObject = {
@@ -25,6 +31,9 @@ const inlineCode: SystemStyleObject = {
   fontFamily: "mono",
   fontWeight: "semibold",
   color: "pink.600",
+  _dark: {
+    bg: "whiteAlpha.100",
+  },
 }
 
 export const layerStyles = {
