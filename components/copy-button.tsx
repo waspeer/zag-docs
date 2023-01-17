@@ -19,6 +19,10 @@ export function CopyButton({ content }: { content: string }) {
       as="button"
       type="button"
       fontSize="xs"
+      _dark={{
+        bg: "gray.800",
+        borderColor: "gray.700",
+      }}
       onClick={() => {
         navigator.clipboard.writeText(content)
         setCopied(true)

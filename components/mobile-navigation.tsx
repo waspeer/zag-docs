@@ -46,7 +46,10 @@ export function MobileNavigation() {
         {...api.triggerProps}
       >
         <HStack>
-          <HiMenu /> <chakra.span display={{ base: "none", xs: "inline"}}>Menu</chakra.span>
+          <HiMenu />{" "}
+          <chakra.span display={{ base: "none", xs: "inline" }}>
+            Menu
+          </chakra.span>
         </HStack>
       </Button>
 

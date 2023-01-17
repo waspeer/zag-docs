@@ -44,6 +44,7 @@ export function Accordion(props: AccordionProps) {
           borderWidth="1px"
           fontSize="sm"
           key={item.title}
+          _dark={{ bg: "gray.800" }}
           {...api.getItemProps({ value: item.title })}
         >
           <h3>
@@ -59,7 +60,7 @@ export function Accordion(props: AccordionProps) {
               }}
             >
               <Box fontWeight="semibold">{item.title}</Box>
-              <Box fontSize="xs" color="gray.600">
+              <Box fontSize="xs" color="gray.600" _dark={{ color: "gray.400" }}>
                 {item.desc}
               </Box>
             </chakra.button>

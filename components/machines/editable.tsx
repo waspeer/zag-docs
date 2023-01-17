@@ -29,6 +29,7 @@ export function Editable(props: any) {
             size="sm"
             variant="outline"
             bg="white"
+            _dark={{ bg: "gray.800" }}
             {...api.editButtonProps}
           >
             Edit
@@ -43,6 +44,7 @@ export function Editable(props: any) {
               size="sm"
               variant="outline"
               bg="white"
+              _dark={{ bg: "gray.800" }}
               {...api.cancelButtonProps}
             >
               Cancel

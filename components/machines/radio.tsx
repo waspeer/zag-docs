@@ -67,6 +67,7 @@ export function Radio(props: RadioProps) {
                 p="px"
                 _hover={{
                   bg: "gray.100",
+                  _dark: { bg: "gray.700" },
                 }}
                 _disabled={{
                   bg: "gray.400",
@@ -76,6 +77,7 @@ export function Radio(props: RadioProps) {
                   "&:not([data-disabled])": {
                     bg: "blue.500",
                     borderColor: "blue.500",
+                    _dark: { bg: "blue.500" },
                   },
                 }}
                 _peerFocusVisible={{

@@ -23,6 +23,7 @@ export function PinInput(props: any) {
             fontSize="lg"
             textAlign="center"
             key={index}
+            _dark={{ bg: "gray.800" }}
             {...api.getInputProps({ index })}
           />
         ))}
@@ -32,6 +33,7 @@ export function PinInput(props: any) {
         borderWidth="1px"
         px="2"
         onClick={api.clearValue}
+        _dark={{ bg: "gray.800" }}
       >
         Clear
       </chakra.button>

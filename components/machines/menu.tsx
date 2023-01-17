@@ -37,6 +37,7 @@ export function Menu(props) {
             listStyleType="none"
             shadow="base"
             className="focus-outline"
+            _dark={{ bg: "gray.800" }}
             {...api.contentProps}
           >
             {data.map((item) => (
@@ -45,7 +46,10 @@ export function Menu(props) {
                 py="1"
                 cursor="pointer"
                 key={item.value}
-                _focus={{ bg: "green.200" }}
+                _focus={{
+                  bg: "green.200",
+                  _dark: { bg: "green.800" },
+                }}
                 {...api.getItemProps({ id: item.value })}
               >
                 {item.label}

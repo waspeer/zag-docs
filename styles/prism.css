@@ -32,6 +32,13 @@ pre[class*="language-"] *::selection {
   color: inherit;
 }
 
+/* Selection */
+[data-theme="dark"] code[class*="language-"]::selection,
+[data-theme="dark"] code[class*="language-"] *::selection,
+[data-theme="dark"] pre[class*="language-"] *::selection {
+  background: var(--colors-gray-700);
+}
+
 /* Code blocks */
 pre[class*="language-"] {
   padding: 1em 0;
@@ -115,6 +122,11 @@ pre[class*="language-"] {
   color: hsl(230, 8%, 24%);
 }
 
+[data-theme="dark"] .token.attr-value > .token.punctuation.attr-equals,
+[data-theme="dark"] .token.special-attr > .token.attr-value > .token.value.css {
+  color: var(--colors-gray-200);
+}
+
 /* CSS overrides */
 .language-css .token.selector {
   color: hsl(5, 74%, 59%);
@@ -122,6 +134,10 @@ pre[class*="language-"] {
 
 .language-css .token.property {
   color: hsl(230, 8%, 24%);
+}
+
+[data-theme="dark"] .language-css .token.property {
+  color: white;
 }
 
 .language-css .token.function,
@@ -259,6 +275,11 @@ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
 /* The highlighted line itself */
 .highlight-line.highlight-line {
   background: hsla(230, 8%, 24%, 0.05);
+  border-left: 2px solid var(--colors-green-400);
+}
+
+[data-theme="dark"] .highlight-line.highlight-line {
+  background: hsla(230, 8%, 24%, 0.2);
   border-left: 2px solid var(--colors-green-400);
 }
 

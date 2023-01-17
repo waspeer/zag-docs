@@ -34,10 +34,17 @@ export function Popover(props: any) {
             position="relative"
             maxW="min(calc(100vw - 16px), 320px)"
             width="full"
+            _dark={{ bg: "gray.800" }}
             {...api.contentProps}
           >
             <chakra.div
-              sx={{ "--arrow-background": "white", "--arrow-size": "8px" }}
+              sx={{
+                "--arrow-background": "white",
+                "--arrow-size": "8px",
+                _dark: {
+                  "--arrow-background": "var(--colors-gray-800)",
+                },
+              }}
               {...api.arrowProps}
             >
               <chakra.div rounded="sm" {...api.innerArrowProps} />
@@ -57,6 +64,7 @@ export function Popover(props: any) {
                 px="4"
                 py="2"
                 borderWidth="1px"
+                _dark={{ bg: "gray.800" }}
               >
                 Action Button
               </chakra.button>

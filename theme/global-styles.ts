@@ -43,6 +43,9 @@ export const globalStyles: SystemStyleObject = {
     marginY: "8",
     th: {
       bg: "gray.100",
+      _dark: {
+        bg: "gray.700",
+      },
     },
     "th, td": {
       borderWidth: "1px",

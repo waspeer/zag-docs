@@ -147,6 +147,9 @@ const components: Record<string, FC<Record<string, any>>> = {
         my="8"
         bg="hsl(230, 1%, 98%)"
         rounded="6px"
+        _dark={{
+          bg: "gray.900",
+        }}
         {...api.rootProps}
       >
         <Box {...api.triggerGroupProps}>
@@ -157,7 +160,16 @@ const components: Record<string, FC<Record<string, any>>> = {
               fontSize="sm"
               fontWeight="medium"
               borderBottom="2px solid transparent"
-              _selected={{ borderColor: "currentColor", color: "green.500" }}
+              _dark={{
+                borderColor: "gray.900",
+              }}
+              _selected={{
+                borderColor: "currentColor",
+                color: "green.500",
+                _dark: {
+                  borderColor: "green.500",
+                },
+              }}
               _focusVisible={{ outline: "2px solid blue" }}
               {...api.getTriggerProps({ value: framework })}
               key={framework}

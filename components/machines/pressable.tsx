@@ -58,6 +58,7 @@ export function Pressable(props: PressableProps) {
         _focus={{
           outline: "solid 2px royalblue",
         }}
+        _dark={{ bg: "gray.800" }}
       >
         {api.isPressed ? "Pressed!" : "Press Me"}
       </chakra.button>

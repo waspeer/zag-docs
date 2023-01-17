@@ -63,6 +63,7 @@ export function NestedMenu(props) {
             listStyleType="none"
             shadow="base"
             className="focus-outline"
+            _dark={{ bg: "gray.800" }}
             {...fileMenu.contentProps}
           >
             {data.map((item) => (
@@ -71,7 +72,10 @@ export function NestedMenu(props) {
                 py="1"
                 cursor="pointer"
                 key={item.value}
-                _focus={{ bg: "green.200" }}
+                _focus={{
+                  bg: "green.200",
+                  _dark: { bg: "green.800" },
+                }}
                 {...fileMenu.getItemProps({ id: item.value })}
               >
                 {item.label}
@@ -81,7 +85,10 @@ export function NestedMenu(props) {
               px="2"
               py="1"
               cursor="pointer"
-              _focus={{ bg: "green.200" }}
+              _focus={{
+                bg: "green.200",
+                _dark: { bg: "green.800" },
+              }}
               {...shareMenuTriggerProps}
             >
               Share
@@ -103,6 +110,7 @@ export function NestedMenu(props) {
             listStyleType="none"
             shadow="base"
             className="focus-outline"
+            _dark={{ bg: "gray.800" }}
             {...shareMenu.contentProps}
           >
             {shareMenuData.map((item) => (
@@ -111,7 +119,10 @@ export function NestedMenu(props) {
                 py="1"
                 cursor="pointer"
                 key={item.value}
-                _focus={{ bg: "green.200" }}
+                _focus={{
+                  bg: "green.200",
+                  _dark: { bg: "green.800" },
+                }}
                 {...shareMenu.getItemProps({ id: item.value })}
               >
                 {item.label}

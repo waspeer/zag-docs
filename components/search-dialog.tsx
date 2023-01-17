@@ -42,6 +42,7 @@ export function Search() {
               bg="white"
               position="relative"
               pointerEvents="auto"
+              _dark={{ bg: "gray.800" }}
               {...dialog_api.contentProps}
             >
               <chakra.h2 srOnly {...dialog_api.titleProps}>
@@ -70,6 +71,7 @@ export function Search() {
                   <chakra.input
                     width="full"
                     outline="0"
+                    _dark={{ bg: "gray.800" }}
                     {...combobox_api.inputProps}
                   />
                 </Flex>
@@ -90,7 +92,10 @@ export function Search() {
                           <chakra.li
                             px="3"
                             py="1"
-                            _selected={{ bg: "green.100" }}
+                            _selected={{
+                              bg: "green.100",
+                              _dark: { bg: "green.900" },
+                            }}
                             display="flex"
                             alignItems="center"
                             minHeight="14"
@@ -118,7 +123,9 @@ export function Search() {
                               <Box fontWeight="semibold">{item.content}</Box>
                             </Box>
 
-                            <Icon as={GrReturn} opacity={0.4} />
+                            <Icon opacity={0.4}>
+                              <GrReturn className="icon-gr-return" />
+                            </Icon>
                           </chakra.li>
                         </a>
                       </Link>

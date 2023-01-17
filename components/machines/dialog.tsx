@@ -27,6 +27,7 @@ export function Dialog(props: { controls: any }) {
             inset="0"
             bg="blackAlpha.500"
             zIndex="modal"
+            _dark={{ bg: "blackAlpha.600" }}
           />
           <Center
             height="100vh"
@@ -44,6 +45,7 @@ export function Dialog(props: { controls: any }) {
               padding="5"
               position="relative"
               pointerEvents="auto"
+              _dark={{ bg: "gray.800" }}
               {...api.contentProps}
             >
               <chakra.h2

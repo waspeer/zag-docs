@@ -44,7 +44,7 @@ export function TopNavigation() {
             fontSize="xs"
             letterSpacing="wider"
             fontWeight="semibold"
-            display={{ base: "none", sm: "block"}}
+            display={{ base: "none", sm: "block" }}
             _dark={{
               borderBottomColor: "gray.700",
               bg: "orange.900",
@@ -55,7 +55,7 @@ export function TopNavigation() {
           </Badge>
           {/* <WorkshopLink /> */}
         </HStack>
-        <HStack spacing="8">
+        <HStack spacing="4">
           <nav hidden>
             <HStack
               as="ul"

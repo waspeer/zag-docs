@@ -46,6 +46,9 @@ export function Checkbox(props: CheckboxProps) {
           color="white"
           _hover={{
             bg: "gray.100",
+            _dark: {
+              bg: "gray.700",
+            },
           }}
           _disabled={{
             bg: "gray.400",

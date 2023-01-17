@@ -98,6 +98,9 @@ const PaginationLink = chakra("a", {
     _hover: {
       bg: "rgba(0, 0, 0, 0.04)",
       cursor: "pointer",
+      _dark: {
+        bg: "gray.700",
+      },
     },
     _focus: {
       outline: "2px solid royalblue",
@@ -112,6 +115,14 @@ const PaginationLink = chakra("a", {
 
     _selected: {
       bg: "green.500",
+      color: "white",
+      _dark: {
+        bg: "green.500",
+      },
+    },
+
+    _dark: {
+      bg: "gray.800",
       color: "white",
     },
   },

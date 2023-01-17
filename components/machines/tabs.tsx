@@ -18,7 +18,12 @@ export function Tabs(props: any) {
 
   return (
     <chakra.div width="full" maxW="400px" fontSize="sm">
-      <chakra.div bg="white" borderBottomWidth="1px" {...api.triggerGroupProps}>
+      <chakra.div
+        bg="white"
+        _dark={{ bg: "gray.800" }}
+        borderBottomWidth="1px"
+        {...api.triggerGroupProps}
+      >
         {data.map((item) => (
           <chakra.button
             py="2"
@@ -28,7 +33,9 @@ export function Tabs(props: any) {
             _selected={{
               color: "green.500",
               borderBottomColor: "currentColor",
+              _dark: { borderBottomColor: "currentColor" },
             }}
+            _dark={{ borderBottomColor: "transparent" }}
             {...api.getTriggerProps({ value: item.value })}
             key={item.value}
           >
@@ -41,6 +48,7 @@ export function Tabs(props: any) {
           padding="4"
           bg="white"
           minHeight="20"
+          _dark={{ bg: "gray.800" }}
           {...api.getContentProps({ value: item.value })}
           key={item.value}
         >

@@ -25,6 +25,7 @@ export function TagsInput(props: any) {
           mt="2"
           py="2px"
           px="1"
+          _dark={{ bg: "gray.800" }}
           {...api.controlProps}
         >
           {api.value.map((value, index) => {
@@ -36,7 +37,8 @@ export function TagsInput(props: any) {
                   px="2"
                   display="inline-block"
                   margin="4px"
-                  _selected={{ bg: "green.200" }}
+                  _dark={{ bg: "gray.700" }}
+                  _selected={{ bg: "green.200", _dark: { bg: "green.800" } }}
                   _disabled={{ opacity: 0.6 }}
                   {...api.getTagProps(opt)}
                 >
@@ -59,6 +61,7 @@ export function TagsInput(props: any) {
             px="2"
             placeholder="Add tag..."
             _focus={{ outline: "0" }}
+            _dark={{ bg: "gray.800" }}
             {...api.inputProps}
           />
         </chakra.div>
