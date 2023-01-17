@@ -1,13 +1,13 @@
 import Icon from "@chakra-ui/icon"
 import { Box, Flex, HStack, Text } from "@chakra-ui/layout"
 import { chakra } from "@chakra-ui/system"
-import Portal from "@reach/portal"
 import { useSearch } from "lib/use-search"
 import Link from "next/link"
 import { BiSearch } from "react-icons/bi"
 import { GrReturn } from "react-icons/gr"
 import { HiDocument, HiHashtag } from "react-icons/hi"
 import { SearchTrigger } from "./search-trigger"
+import { Portal } from "@zag-js/react"
 
 export function Search() {
   const { dialog_api, combobox_api, results } = useSearch()
@@ -32,7 +32,7 @@ export function Search() {
             position="fixed"
             zIndex="modal"
             inset="0"
-            {...dialog_api.underlayProps}
+            {...dialog_api.containerProps}
           >
             <Box
               mt="90px"
@@ -82,7 +82,7 @@ export function Search() {
                   maxHeight="340px"
                   overflowY="auto"
                   px="1"
-                  {...combobox_api.listboxProps}
+                  {...combobox_api.contentProps}
                 >
                   {results.map((item) => {
                     const isLvl1 = item.type === "lvl1"

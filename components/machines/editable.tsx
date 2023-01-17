@@ -30,14 +30,14 @@ export function Editable(props: any) {
             variant="outline"
             bg="white"
             _dark={{ bg: "gray.800" }}
-            {...api.editButtonProps}
+            {...api.editTriggerProps}
           >
             Edit
           </Button>
         )}
         {api.isEditing && (
           <HStack>
-            <Button size="sm" variant="green" {...api.submitButtonProps}>
+            <Button size="sm" variant="green" {...api.submitTriggerProps}>
               Save
             </Button>
             <Button
@@ -45,7 +45,7 @@ export function Editable(props: any) {
               variant="outline"
               bg="white"
               _dark={{ bg: "gray.800" }}
-              {...api.cancelButtonProps}
+              {...api.cancelTriggerProps}
             >
               Cancel
             </Button>

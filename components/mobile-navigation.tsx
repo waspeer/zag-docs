@@ -1,8 +1,7 @@
 import { Box, Flex, HStack, Spacer } from "@chakra-ui/layout"
 import { useToken } from "@chakra-ui/system"
-import Portal from "@reach/portal"
 import * as dialog from "@zag-js/dialog"
-import { normalizeProps, useMachine } from "@zag-js/react"
+import { normalizeProps, useMachine, Portal } from "@zag-js/react"
 import { useRouteChange } from "lib/use-route-change"
 import { useEffect, useRef } from "react"
 import { HiMenu, HiX } from "react-icons/hi"
@@ -55,7 +54,7 @@ export function MobileNavigation() {
 
       {api.isOpen && (
         <Portal>
-          <div {...api.underlayProps}>
+          <div {...api.containerProps}>
             <Box
               {...api.contentProps}
               position="fixed"
@@ -77,7 +76,7 @@ export function MobileNavigation() {
                   size="sm"
                   px="2"
                   _dark={{ bg: "gray.800" }}
-                  {...api.closeButtonProps}
+                  {...api.closeTriggerProps}
                 >
                   <HStack>
                     <HiX /> <span>Close</span>

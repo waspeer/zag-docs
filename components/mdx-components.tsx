@@ -152,7 +152,7 @@ const components: Record<string, FC<Record<string, any>>> = {
         }}
         {...api.rootProps}
       >
-        <Box {...api.triggerGroupProps}>
+        <Box {...api.tablistProps}>
           {FRAMEWORKS.map((framework) => (
             <chakra.button
               py="2"

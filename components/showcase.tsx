@@ -20,6 +20,8 @@ import { ContextMenu } from "components/machines/context-menu"
 import { NestedMenu } from "components/machines/nested-menu"
 import { HoverCard } from "components/machines/hover-card"
 import { Pagination } from "components/machines/pagination"
+import { Select } from "./machines/select"
+import { Combobox } from "components/machines/combobox"
 
 const components = {
   Dialog: () => (
@@ -39,7 +41,22 @@ const components = {
       defaultProps={{
         indeterminate: false,
         disabled: false,
-        readonly: false,
+        readOnly: false,
+      }}
+    />
+  ),
+  Combobox: () => (
+    <Playground
+      component={Combobox}
+      defaultProps={{
+        disabled: false,
+        readOnly: false,
+        blurOnSelect: false,
+        loop: false,
+        inputBehavior: {
+          default: "autohighlight",
+          options: ["autohighlight", "autocomplete", "none"],
+        },
       }}
     />
   ),
@@ -48,7 +65,7 @@ const components = {
       component={Radio}
       defaultProps={{
         disabled: false,
-        readonly: false,
+        readOnly: false,
       }}
     />
   ),
@@ -76,8 +93,7 @@ const components = {
       defaultProps={{
         allowHalf: true,
         disabled: false,
-        readonly: false,
-        value: 2.5,
+        readOnly: false,
         max: 5,
         dir: {
           options: ["ltr", "rtl"],
@@ -92,10 +108,6 @@ const components = {
       defaultProps={{
         collapsible: true,
         multiple: false,
-        value: {
-          default: "Aircrafts",
-          options: ["Aircrafts", "Automobiles", "Watercraft"],
-        },
       }}
     />
   ),
@@ -186,7 +198,7 @@ const components = {
       component={Slider}
       defaultProps={{
         disabled: false,
-        readonly: false,
+        readOnly: false,
         origin: { default: "start", options: ["start", "center"] },
         dir: { default: "ltr", options: ["ltr", "rtl"] },
       }}
@@ -197,7 +209,7 @@ const components = {
       component={RangeSlider}
       defaultProps={{
         disabled: false,
-        readonly: false,
+        readOnly: false,
         dir: { default: "ltr", options: ["ltr", "rtl"] },
       }}
     />
@@ -235,9 +247,20 @@ const components = {
       }}
     />
   ),
+  Select: () => (
+    <Playground
+      component={Select}
+      defaultProps={{
+        loop: false,
+        selectOnTab: false,
+        disabled: false,
+        readOnly: false,
+      }}
+    />
+  ),
 }
 
 export function Showcase(props: { id: keyof typeof components }) {
-  const Component = components[props.id]
+  const Component = components[props.id] ?? "span"
   return <Component />
 }

@@ -1,8 +1,7 @@
 import { Flex, Stack, Text } from "@chakra-ui/layout"
 import { chakra } from "@chakra-ui/system"
-import Portal from "@reach/portal"
 import * as hoverCard from "@zag-js/hover-card"
-import { normalizeProps, useMachine } from "@zag-js/react"
+import { normalizeProps, useMachine, Portal } from "@zag-js/react"
 import { useId } from "react"
 
 type HoverCardProps = {
@@ -60,7 +59,7 @@ export function HoverCard(props: HoverCardProps) {
                 }}
                 {...api.arrowProps}
               >
-                <chakra.div rounded="sm" {...api.innerArrowProps} />
+                <chakra.div rounded="sm" {...api.arrowTipProps} />
               </chakra.div>
               <Stack spacing="3">
                 <chakra.img

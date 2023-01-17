@@ -1,22 +1,19 @@
 ```jsx
 import * as dialog from "@zag-js/dialog"
-import { Portal } from "@reach/portal"
-import { useMachine, normalizeProps } from "@zag-js/react"
+import { useMachine, normalizeProps, Portal } from "@zag-js/react"
 
 export function Dialog() {
   const [state, send] = useMachine(dialog.machine({ id: "1" }))
-  
+
   const api = dialog.connect(state, send, normalizeProps)
 
   return (
     <>
-      <button {...api.triggerProps}>
-        Open Dialog
-      </button>
+      <button {...api.triggerProps}>Open Dialog</button>
       {api.isOpen && (
         <Portal>
           <div {...api.backdropProps} />
-          <div {...api.underlayProps}>
+          <div {...api.containerProps}>
             <div {...api.contentProps}>
               <h2 {...api.titleProps}>Edit profile</h2>
               <p {...api.descriptionProps}>
@@ -26,7 +23,7 @@ export function Dialog() {
                 <input placeholder="Enter name..." />
                 <button>Save</button>
               </div>
-              <button {...api.closeButtonProps}>Close</button>
+              <button {...api.closeTriggerProps}>Close</button>
             </div>
           </div>
         </Portal>

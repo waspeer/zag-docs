@@ -1,6 +1,5 @@
-import { Portal } from "@reach/portal"
 import * as popover from "@zag-js/popover"
-import { normalizeProps, useMachine } from "@zag-js/react"
+import { normalizeProps, useMachine, Portal } from "@zag-js/react"
 import * as React from "react"
 import { chakra } from "@chakra-ui/system"
 import { Stack } from "@chakra-ui/layout"
@@ -47,7 +46,7 @@ export function Popover(props: any) {
               }}
               {...api.arrowProps}
             >
-              <chakra.div rounded="sm" {...api.innerArrowProps} />
+              <chakra.div rounded="sm" {...api.arrowTipProps} />
             </chakra.div>
 
             <Stack>
@@ -74,7 +73,7 @@ export function Popover(props: any) {
               top="3"
               right="3"
               padding="2"
-              {...api.closeButtonProps}
+              {...api.closeTriggerProps}
             >
               <HiX />
             </chakra.button>

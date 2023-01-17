@@ -38,7 +38,7 @@ export function MultiframeworkTabs() {
   const api = tabs.connect(state, send, normalizeProps)
   return (
     <Box {...api.rootProps}>
-      <HStack {...api.triggerGroupProps}>
+      <HStack {...api.tablistProps}>
         <FrameworkButton {...api.getTriggerProps({ value: "react" })}>
           <VStack>
             <ReactIcon />
@@ -104,10 +104,10 @@ export function MultiframeworkTabs() {
           <Playground
             component={NumberInput}
             hideControls
+            defaultContext={{ value: 0 }}
             defaultProps={{
               min: -10,
               max: 20,
-              value: 0,
               disabled: false,
             }}
           />

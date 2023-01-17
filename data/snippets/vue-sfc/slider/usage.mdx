@@ -5,7 +5,6 @@ import { normalizeProps, useMachine } from "@zag-js/vue";
 import { computed } from "vue";
 
 const [state, send] = useMachine(slider.machine({ id: "1" }));
-;
 const api = computed(() => slider.connect(state.value, send, normalizeProps));
 </script>
 
@@ -20,7 +19,7 @@ const api = computed(() => slider.connect(state.value, send, normalizeProps));
         <div v-bind="api.rangeProps" />
       </div>
       <div v-bind="api.thumbProps">
-        <input v-bind="api.inputProps" />
+        <input v-bind="api.hiddenInputProps" />
       </div>
     </div>
   </div>

@@ -1,9 +1,8 @@
 import Icon from "@chakra-ui/icon"
 import { Center, HStack } from "@chakra-ui/layout"
 import { chakra } from "@chakra-ui/system"
-import { Portal } from "@reach/portal"
 import * as dialog from "@zag-js/dialog"
-import { normalizeProps, useMachine } from "@zag-js/react"
+import { normalizeProps, useMachine, Portal } from "@zag-js/react"
 import { Button } from "components/button"
 import { HiX } from "react-icons/hi"
 import { useId } from "react"
@@ -35,7 +34,7 @@ export function Dialog(props: { controls: any }) {
             position="fixed"
             zIndex="modal"
             inset="0"
-            {...api.underlayProps}
+            {...api.containerProps}
           >
             <chakra.div
               width="full"
@@ -78,7 +77,7 @@ export function Dialog(props: { controls: any }) {
                 position="absolute"
                 top="3"
                 right="3"
-                {...api.closeButtonProps}
+                {...api.closeTriggerProps}
               >
                 <Icon as={HiX} />
               </chakra.button>

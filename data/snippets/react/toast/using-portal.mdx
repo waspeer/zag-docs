@@ -1,5 +1,5 @@
 ```jsx {1,13,21}
-import { Portal } from "@reach/portal"
+import { Portal } from "@zag-js/react"
 
 // ...
 
@@ -15,7 +15,7 @@ export function ToastProvider() {
         {Object.entries(api.toastsByPlacement).map(([placement, toasts]) => (
           <div key={placement} {...api.getGroupProps({ placement })}>
             {toasts.map((toast) => (
-              <Toast key={toast.id} actor={toast.actor} />
+              <Toast key={toast.id} actor={toast} />
             ))}
           </div>
         ))}

@@ -5,9 +5,12 @@ import { BiChevronDown, BiChevronUp } from "react-icons/bi"
 import { useId } from "react"
 
 export function NumberInput(props: any) {
-  const [state, send] = useMachine(numberInput.machine({ id: useId() }), {
-    context: props.controls,
-  })
+  const [state, send] = useMachine(
+    numberInput.machine({ id: useId(), ...props.defaultContext }),
+    {
+      context: props.controls,
+    },
+  )
 
   const api = numberInput.connect(state, send, normalizeProps)
 
@@ -42,7 +45,7 @@ export function NumberInput(props: any) {
             display="flex"
             justifyContent="center"
             _disabled={{ opacity: 0.5 }}
-            {...api.incrementButtonProps}
+            {...api.incrementTriggerProps}
           >
             <BiChevronUp />
           </chakra.button>
@@ -53,7 +56,7 @@ export function NumberInput(props: any) {
             display="flex"
             justifyContent="center"
             _disabled={{ opacity: 0.5 }}
-            {...api.decrementButtonProps}
+            {...api.decrementTriggerProps}
           >
             <BiChevronDown />
           </chakra.button>

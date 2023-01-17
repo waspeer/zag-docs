@@ -10,9 +10,12 @@ const data = [
 ]
 
 export function Tabs(props: any) {
-  const [state, send] = useMachine(tabs.machine({ id: useId() }), {
-    context: props.controls,
-  })
+  const [state, send] = useMachine(
+    tabs.machine({ id: useId(), value: "item-1" }),
+    {
+      context: props.controls,
+    },
+  )
 
   const api = tabs.connect(state, send, normalizeProps)
 
@@ -22,7 +25,7 @@ export function Tabs(props: any) {
         bg="white"
         _dark={{ bg: "gray.800" }}
         borderBottomWidth="1px"
-        {...api.triggerGroupProps}
+        {...api.tablistProps}
       >
         {data.map((item) => (
           <chakra.button
