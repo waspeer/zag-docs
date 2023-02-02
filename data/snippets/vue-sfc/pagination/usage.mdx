@@ -20,7 +20,7 @@ const api = computed(() => pagination.connect(state.value, send, normalizeProps)
       </li>
       <li
         v-for="(page, i) in api.pages"
-        :key="page.type === 'page ? page.value : `ellipsis-${i}`"
+        :key="page.type === 'page' ? page.value : `ellipsis-${i}`"
       >
         <span v-if="page.type === 'page'">
           <a :href="`#${page.value}`" v-bind="api.getPageTriggerProps(page)">
