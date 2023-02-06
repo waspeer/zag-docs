@@ -27,7 +27,7 @@ const api = computed(() =>
 <template>
   <div>
     <!-- Hidden select  -->
-    <select v-bind="api.selectProps">
+    <select v-bind="api.hiddenSelectProps">
       <option
         v-for="option in selectData"
         :key="option.value"

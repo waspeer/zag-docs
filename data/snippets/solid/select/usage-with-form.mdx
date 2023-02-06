@@ -24,7 +24,7 @@ export function SelectWithForm() {
     <div>
       <div className="select">
         {/* Hidden select */}
-        <select {...api().selectProps}>
+        <select {...api().hiddenSelectProps}>
           {selectData.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
