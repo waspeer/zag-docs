@@ -21,7 +21,7 @@ export function Tabs(props: any) {
 
   return (
     <chakra.div width="full" maxW="400px" fontSize="sm">
-      <chakra.div bg="white" borderBottomWidth="1px" {...api.tablistProps}>
+      <chakra.div bg="bg-subtle" borderBottomWidth="1px" {...api.tablistProps}>
         {data.map((item) => (
           <chakra.button
             py="2"
@@ -29,8 +29,8 @@ export function Tabs(props: any) {
             borderBottomWidth="2px"
             borderBottomColor="transparent"
             _selected={{
-              color: "green.500",
-              borderBottomColor: "currentColor",
+              color: "text-primary-bold",
+              borderBottomColor: "border-primary-subtle",
             }}
             {...api.getTriggerProps({ value: item.value })}
             key={item.value}
@@ -42,7 +42,7 @@ export function Tabs(props: any) {
       {data.map((item) => (
         <chakra.div
           padding="4"
-          bg="white"
+          bg="bg-subtle"
           minHeight="20"
           {...api.getContentProps({ value: item.value })}
           key={item.value}

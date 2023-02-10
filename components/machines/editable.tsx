@@ -28,7 +28,7 @@ export function Editable(props: any) {
           <Button
             size="sm"
             variant="outline"
-            bg="white"
+            bg="bg-subtle"
             {...api.editTriggerProps}
           >
             Edit
@@ -39,14 +39,10 @@ export function Editable(props: any) {
             <Button size="sm" variant="green" {...api.submitTriggerProps}>
               Save
             </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              bg="white"
-              {...api.cancelTriggerProps}
-            >
+            <Button size="sm" variant="outline" {...api.cancelTriggerProps}>
               Cancel
             </Button>
+            Button
           </HStack>
         )}
       </div>

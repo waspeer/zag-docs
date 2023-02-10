@@ -55,7 +55,7 @@ export function NestedMenu(props) {
       <Portal>
         <div {...fileMenu.positionerProps}>
           <chakra.ul
-            bg="white"
+            bg="bg-subtle"
             width="240px"
             padding="2"
             isolation="isolate"
@@ -70,7 +70,9 @@ export function NestedMenu(props) {
                 py="1"
                 cursor="pointer"
                 key={item.value}
-                _focus={{ bg: "green.200" }}
+                _focus={{
+                  bg: "bg-primary-bold",
+                }}
                 {...fileMenu.getItemProps({ id: item.value })}
               >
                 {item.label}
@@ -80,7 +82,9 @@ export function NestedMenu(props) {
               px="2"
               py="1"
               cursor="pointer"
-              _focus={{ bg: "green.200" }}
+              _focus={{
+                bg: "bg-primary-bold",
+              }}
               {...shareMenuTriggerProps}
             >
               Share
@@ -95,7 +99,7 @@ export function NestedMenu(props) {
       <Portal>
         <div {...shareMenu.positionerProps}>
           <chakra.ul
-            bg="white"
+            bg="bg-subtle"
             width="240px"
             padding="2"
             isolation="isolate"
@@ -110,7 +114,9 @@ export function NestedMenu(props) {
                 py="1"
                 cursor="pointer"
                 key={item.value}
-                _focus={{ bg: "green.200" }}
+                _focus={{
+                  bg: "bg-primary-bold",
+                }}
                 {...shareMenu.getItemProps({ id: item.value })}
               >
                 {item.label}

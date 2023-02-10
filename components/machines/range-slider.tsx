@@ -38,7 +38,7 @@ export function RangeSlider(props: any) {
           height="4px"
           rounded="full"
           flex="1"
-          bg="gray.300"
+          bg="bg-bold"
           {...api.trackProps}
         >
           <chakra.div

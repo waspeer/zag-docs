@@ -10,6 +10,7 @@ import { Button } from "./button"
 import { FrameworkSelect } from "./framework-select"
 import { LogoWithLink } from "./logo"
 import { Sidebar } from "./sidebar"
+import { chakra } from "@chakra-ui/system"
 
 export function MobileNavigation() {
   const [state, send] = useMachine(
@@ -40,10 +41,14 @@ export function MobileNavigation() {
         display={{ base: "inline-flex", lg: "none" }}
         size="sm"
         px="2"
+        bg="bg-subtle"
         {...api.triggerProps}
       >
         <HStack>
-          <HiMenu /> <span>Menu</span>
+          <HiMenu />{" "}
+          <chakra.span display={{ base: "none", xs: "inline" }}>
+            Menu
+          </chakra.span>
         </HStack>
       </Button>
 
@@ -54,10 +59,10 @@ export function MobileNavigation() {
               {...api.contentProps}
               position="fixed"
               inset="0"
-              bg="white"
               zIndex="modal"
               pb="10"
               overflowY="auto"
+              bg="bg-subtle"
             >
               <Flex
                 justify="space-between"
@@ -69,6 +74,7 @@ export function MobileNavigation() {
                   ref={initialRef}
                   size="sm"
                   px="2"
+                  bg="bg-subtle"
                   {...api.closeTriggerProps}
                 >
                   <HStack>
@@ -77,7 +83,7 @@ export function MobileNavigation() {
                 </Button>
               </Flex>
               <Box px="8">
-                <Spacer height="10" bg="white" />
+                <Spacer height="10" bg="transparent" />
                 <Box mb="8">
                   <FrameworkSelect />
                 </Box>

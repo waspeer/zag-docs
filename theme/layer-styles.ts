@@ -10,14 +10,16 @@ const blockquote: SystemStyleObject = {
   marginY: "5",
   paddingX: "4",
   paddingY: "3",
-  bg: "green.50",
+  bg: "bg-tertiary-subtle",
   borderWidth: "1px",
+  borderLeftColor: "border-primary-subtle",
+  borderLeftWidth: "2px",
   rounded: "4px",
 }
 
 const inlineCode: SystemStyleObject = {
   whiteSpace: "nowrap",
-  bg: "blackAlpha.100",
+  bg: "bg-code-inline",
   rounded: "base",
   paddingY: "0.5",
   paddingX: "1",
@@ -25,6 +27,7 @@ const inlineCode: SystemStyleObject = {
   fontFamily: "mono",
   fontWeight: "semibold",
   color: "pink.600",
+  _dark: { color: "pink.400" },
 }
 
 export const layerStyles = {

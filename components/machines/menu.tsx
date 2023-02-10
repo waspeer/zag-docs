@@ -29,7 +29,7 @@ export function Menu(props) {
       <Portal>
         <div {...api.positionerProps}>
           <chakra.ul
-            bg="white"
+            bg="bg-subtle"
             width="240px"
             padding="2"
             isolation="isolate"
@@ -44,7 +44,9 @@ export function Menu(props) {
                 py="1"
                 cursor="pointer"
                 key={item.value}
-                _focus={{ bg: "green.200" }}
+                _focus={{
+                  bg: "bg-primary-bold",
+                }}
                 {...api.getItemProps({ id: item.value })}
               >
                 {item.label}

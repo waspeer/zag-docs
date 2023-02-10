@@ -41,7 +41,7 @@ export function LogoWithLink() {
         aria-label="Go to Zag homepage"
         aria-current={asPath === "/" ? "page" : undefined}
       >
-        <Logo color="#000" height="8" />
+        <Logo height="8" />
       </a>
     </Link>
   )

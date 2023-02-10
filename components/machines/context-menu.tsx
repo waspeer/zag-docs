@@ -19,12 +19,12 @@ export function ContextMenu(props) {
 
   return (
     <div>
-      <chakra.div bg="blackAlpha.200" p="4" {...api.contextTriggerProps}>
+      <chakra.div bg="bg-subtle" p="4" {...api.contextTriggerProps}>
         <div>Open context menu</div>
       </chakra.div>
       <div {...api.positionerProps}>
         <chakra.ul
-          bg="white"
+          bg="bg-subtle"
           width="240px"
           padding="2"
           isolation="isolate"
@@ -39,7 +39,9 @@ export function ContextMenu(props) {
               py="1"
               cursor="pointer"
               key={item.value}
-              _focus={{ bg: "green.200" }}
+              _focus={{
+                bg: "bg-primary-bold",
+              }}
               {...api.getItemProps({ id: item.value })}
             >
               {item.label}

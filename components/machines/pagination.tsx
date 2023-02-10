@@ -82,7 +82,7 @@ const PaginationLink = chakra("a", {
     h: 8,
     textAlign: "center",
     m: "auto 4px",
-    color: "rgba(0, 0, 0, 0.87)",
+    color: "text-bold",
     display: "flex",
     boxSizing: "border-box",
     alignItems: "center",
@@ -92,11 +92,11 @@ const PaginationLink = chakra("a", {
     userSelect: "none",
     textDecoration: "none",
     border: "solid 1px",
-    borderColor: "gray.200",
-    bg: "white",
+    borderColor: "border-bold",
+    bg: "bg-subtle",
 
     _hover: {
-      bg: "rgba(0, 0, 0, 0.04)",
+      bg: "bg-bold",
       cursor: "pointer",
     },
     _focus: {

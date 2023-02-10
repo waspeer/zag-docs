@@ -66,7 +66,7 @@ export function Radio(props: RadioProps) {
                 color="white"
                 p="px"
                 _hover={{
-                  bg: "gray.100",
+                  bg: "bg-subtle",
                 }}
                 _disabled={{
                   bg: "gray.400",

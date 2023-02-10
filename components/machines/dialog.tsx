@@ -24,7 +24,7 @@ export function Dialog(props: { controls: any }) {
           <chakra.div
             position="fixed"
             inset="0"
-            bg="blackAlpha.500"
+            bg="blackAlpha.600"
             zIndex="modal"
           />
           <Center
@@ -39,7 +39,7 @@ export function Dialog(props: { controls: any }) {
               width="full"
               maxW="400px"
               rounded="md"
-              bg="white"
+              bg="bg-subtle"
               padding="5"
               position="relative"
               pointerEvents="auto"

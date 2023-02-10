@@ -1,5 +1,6 @@
 import { Badge, Box, Flex, HStack } from "@chakra-ui/layout"
 import { GithubIcon } from "components/icons"
+import { ThemeToggle } from "components/theme-toggle"
 import { FaDiscord } from "react-icons/fa"
 import siteConfig from "site.config"
 import { IconLink } from "./icon-link"
@@ -10,7 +11,7 @@ import { MobileNavigation } from "./mobile-navigation"
 export function TopNavigation() {
   return (
     <Box
-      bg="whiteAlpha.900"
+      bg="bg-header"
       backdropFilter="auto"
       backdropBlur="sm"
       position="sticky"
@@ -19,7 +20,8 @@ export function TopNavigation() {
       zIndex={50}
       py="4"
       borderBottomWidth="1px"
-      borderBottomColor="gray.100"
+      borderBottomColor="border-subtle"
+      overflowX="hidden"
     >
       <Flex
         align="center"
@@ -31,19 +33,21 @@ export function TopNavigation() {
         <HStack spacing="3">
           <LogoWithLink />
           <Badge
-            bg="orange.100"
-            color="orange.700"
+            color="text-badge"
+            bg="bg-badge"
             px="2"
             py="0.5"
             fontSize="xs"
             letterSpacing="wider"
             fontWeight="semibold"
+            display={{ base: "none", sm: "block" }}
+            borderBottomColor="border-subtle"
           >
             BETA
           </Badge>
           {/* <WorkshopLink /> */}
         </HStack>
-        <HStack spacing="8">
+        <HStack spacing="4">
           <nav hidden>
             <HStack
               as="ul"
@@ -68,6 +72,7 @@ export function TopNavigation() {
               icon={FaDiscord}
               label="Join the Discord server"
             />
+            <ThemeToggle />
             <MobileNavigation />
           </HStack>
         </HStack>

@@ -7,7 +7,7 @@ const Header = (props: any) => (
     fontSize="sm"
     align="center"
     height="48px"
-    bg="white"
+    bg="transparent"
     borderBottomWidth="1px"
     px="4"
     fontWeight="medium"
@@ -53,20 +53,25 @@ export function Playground(props: PlaygroundProps) {
       borderWidth="1px"
       minHeight="24em"
       my="16"
+      bg="bg-code-block"
+      borderColor="border-subtle"
     >
       <Flex
         align="flex-start"
         justify="center"
         py="20"
-        bg="gray.50"
         flex="1"
         bgImage="radial-gradient(circle,var(--colors-gray-200) 1px, transparent 1px);"
         bgSize="16px 16px"
+        _dark={{
+          bgImage:
+            "radial-gradient(circle,var(--colors-gray-700) 1px, transparent 1px);",
+        }}
       >
         <Comp controls={state} defaultContext={defaultContext} />
       </Flex>
 
-      <Box flexBasis="1px" alignSelf="stretch" bg="gray.200" />
+      <Box flexBasis="1px" alignSelf="stretch" bg="bg-bold" />
 
       <Box width={{ md: "240px" }} fontSize="sm" hidden={isEmpty}>
         <Header>Properties</Header>
@@ -86,10 +91,11 @@ export function Playground(props: PlaygroundProps) {
                   key={key}
                 >
                   <div>{key}</div>
-                  <input
+                  <chakra.input
                     id={key}
                     type="checkbox"
                     defaultChecked={value as any}
+                    bg="bg-subtle"
                     onChange={(e) => {
                       setState({ ...state, [key]: !value })
                     }}
@@ -110,6 +116,7 @@ export function Playground(props: PlaygroundProps) {
                     id={key}
                     type="text"
                     defaultValue={value as any}
+                    bg="bg-subtle"
                     onChange={(e) => {
                       setState({ ...state, [key]: e.target.value })
                     }}
@@ -128,6 +135,7 @@ export function Playground(props: PlaygroundProps) {
                     maxWidth="6ch"
                     borderWidth="1px"
                     px="2"
+                    bg="bg-subtle"
                     defaultValue={state[key] as number}
                     onChange={(e) => {
                       const val = e.currentTarget.valueAsNumber
@@ -148,6 +156,7 @@ export function Playground(props: PlaygroundProps) {
                   borderWidth="1px"
                   fontSize="xs"
                   px="1"
+                  bg="bg-subtle"
                   defaultValue={state[key] as any}
                   onChange={(e) => {
                     setState((s) => ({ ...s, [key]: e.target.value }))

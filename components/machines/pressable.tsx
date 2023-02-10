@@ -42,11 +42,10 @@ export function Pressable(props: PressableProps) {
         {...api.pressableProps}
         px="4"
         py="3"
-        color="white"
         w="28"
-        bg="gray.600"
+        bg="bg-subtle"
         _pressed={{
-          bg: "gray.700",
+          bg: "bg-bold",
         }}
         _hover={{
           opacity: 0.95,

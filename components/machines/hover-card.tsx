@@ -38,7 +38,7 @@ export function HoverCard(props: HoverCardProps) {
         <Portal>
           <div {...api.positionerProps}>
             <chakra.div
-              bg="white"
+              bg="bg-subtle"
               padding="4"
               borderWidth="1px"
               filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 15%))"
@@ -49,7 +49,10 @@ export function HoverCard(props: HoverCardProps) {
               {...api.contentProps}
             >
               <chakra.div
-                sx={{ "--arrow-background": "white", "--arrow-size": "8px" }}
+                sx={{
+                  "--arrow-background": "bg-subtle",
+                  "--arrow-size": "8px",
+                }}
                 {...api.arrowProps}
               >
                 <chakra.div rounded="sm" {...api.arrowTipProps} />

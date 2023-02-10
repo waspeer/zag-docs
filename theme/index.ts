@@ -3,6 +3,7 @@ import { components } from "./components"
 import { globalStyles } from "./global-styles"
 import { layerStyles } from "./layer-styles"
 import { textStyles } from "./text-styles"
+import { semanticTokens } from "./semantic-tokens"
 
 const theme = {
   ...foundations,
@@ -15,12 +16,21 @@ const theme = {
     useSystemColorMode: false,
     initialColorMode: "light",
   },
+  breakpoints: {
+    xs: "20rem",
+    sm: "30em",
+    md: "48em",
+    lg: "62em",
+    xl: "80em",
+    "2xl": "96em",
+  },
   styles: {
     global: globalStyles,
   },
   layerStyles,
   textStyles,
   components,
+  semanticTokens,
 }
 
 export default theme
