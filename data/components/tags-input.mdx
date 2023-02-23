@@ -72,8 +72,8 @@ The tags input package exports two key functions:
 - `connect` — The function that translates the machine's state to JSX attributes
   and event handlers.
 
-> You'll also need to provide a unique `id` to the `useMachine` hook. This is used
-> to ensure that every part has a unique identifier.
+> You'll also need to provide a unique `id` to the `useMachine` hook. This is
+> used to ensure that every part has a unique identifier.
 
 Next, import the required hooks and functions for your framework and use the
 tags input machine in your project 🔥
@@ -254,31 +254,7 @@ const [state, send] = useMachine(
 
 The tag input's `api` exposes the following methods:
 
-- `value` — The value of the added tags.
-- `count` — The total number of the added tags.
-- `valueAsString` — The value of the added tags represented as a string.
-- `inputValue` — The value of the tags input field.
-- `setValue()` — Used to set the value of the accordion that will be expanded.
-- `addValue()` — Function used to add a new tag value.
-- `deleteValue()` — Function used to remove a specific tag value.
-- `clearAll()` — Function used to clear all tag values.
-
-```jsx
-const api = connect(state, send)
-
-api.value
-// => ["tag-1", "tag-2"]
-
-api.setValue(["item-2", "item-3"]) // => ["item-2", "item-3"]
-
-api.valueAsString // => "['item-2', 'item-3']"
-
-api.addValue("item-4") // => ["item-2", "item-3", "item-4"]
-
-api.deleteValue("item-2") // => ["item-3", "item-4"]
-
-api.clearAll() // => []
-```
+<ApiTable name="tags-input" />
 
 ## Styling guide
 

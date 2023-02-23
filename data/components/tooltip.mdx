@@ -69,8 +69,8 @@ To get the tooltip working correct, you'll need to:
 - Setup the tooltip portal, this is a shared container for all tooltips
 - Add the `triggerProps`, and `tooltipProps` to the elements
 
-> You'll also need to provide a unique `id` to the `useMachine` hook. This is used
-> to ensure that every part has a unique identifier.
+> You'll also need to provide a unique `id` to the `useMachine` hook. This is
+> used to ensure that every part has a unique identifier.
 
 Next, import the required hooks and functions for your framework and use the
 tooltip machine in your project 🔥
@@ -246,17 +246,7 @@ const [state, send] = useMachine(
 
 The tooltip's `api` exposes the following methods:
 
-- `isOpen` — Whether the tooltip is open or not.
-- `open()` — Function used to programmatically open the tooltip.
-- `close()` — Function used to programmatically close the tooltip.
-
-```jsx
-api.isOpen // => boolean
-
-api.open()
-
-api.close()
-```
+<ApiTable name="tooltip" />
 
 ## Styling guide
 

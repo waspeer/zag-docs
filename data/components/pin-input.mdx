@@ -200,31 +200,7 @@ const [state, send] = useMachine(
 
 The pin input's `api` exposes the following methods:
 
-- `value` — The value of the pin input as an array.
-- `valueAsString` — The value of the pin input as string.
-- `isValueComplete` — Whether all input's have been filled.
-- `setValue()` — Function used to set the a new value of the input.
-- `clearValue()` — Function used to clear the values.
-- `setValueAtIndex()` — Function used to set value at the specified index.
-- `focus()` — Function used to focus the first input.
-
-```jsx
-const api = connect(state, send)
-
-api.value
-// => ["1", "3", "3"]
-
-api.valueAsString
-// => "133"
-
-api.isValueComplete
-// => true
-
-api.setValue(["3", "0", "0"])
-api.clearValue()
-
-api.setValueAtIndex(1, "2") // sets the value at index 1 to "2"
-```
+<ApiTable name="pin-input" />
 
 ## Styling guide
 

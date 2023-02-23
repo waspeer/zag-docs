@@ -121,34 +121,7 @@ const [state, send] = useMachine(
 
 The rating's `api` provides helpful properties and methods
 
-| Property         | Description                                                     |
-| ---------------- | --------------------------------------------------------------- |
-| `isHovering`     | Whether the rating is being hovered                             |
-| `value`          | Value of the rating                                             |
-| `hoveredValue`   | Hovered value of rating                                         |
-| `size`           | Size of the rating                                              |
-| `getRatingState` | Get info about a particular rating item by providing it's index |
-
-```js
-const api = connect(state, send)
-
-api.value
-// '1' | '2.5' | '4'
-
-api.isHovering
-// true | false
-
-api.getRatingState(0)
-/* 
-{
-    isEqual: true,
-    isValueEmpty: false,
-    isHighlighted: false,
-    isHalf true,
-    isChecked: true,
-}
-*/
-```
+<ApiTable name="rating-group" />
 
 ## Usage within forms
 

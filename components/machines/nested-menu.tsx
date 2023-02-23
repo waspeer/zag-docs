@@ -72,6 +72,7 @@ export function NestedMenu(props) {
                 key={item.value}
                 _focus={{
                   bg: "bg-primary-bold",
+                  color: "white",
                 }}
                 {...fileMenu.getItemProps({ id: item.value })}
               >
@@ -84,6 +85,7 @@ export function NestedMenu(props) {
               cursor="pointer"
               _focus={{
                 bg: "bg-primary-bold",
+                color: "white",
               }}
               {...shareMenuTriggerProps}
             >
@@ -116,6 +118,7 @@ export function NestedMenu(props) {
                 key={item.value}
                 _focus={{
                   bg: "bg-primary-bold",
+                  color: "white",
                 }}
                 {...shareMenu.getItemProps({ id: item.value })}
               >

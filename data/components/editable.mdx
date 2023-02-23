@@ -141,24 +141,7 @@ const [state, send] = useMachine(
 
 The editable's `api` method exposes the following methods:
 
-- `isEditing` — Whether the editable is in the edit mode.
-- `value` — The current value of the editable.
-- `setValue()` — Function to set the value of the editable.
-- `edit()` — Function to take the editable into edit mode.
-- `cancel()` — Function to cancel the current editing session.
-- `submit()` — Function to commit or save the value.
-
-```jsx
-const api = connect(state, send)
-
-api.isEditing // => false
-api.isValueEmpty // => false
-
-api.edit()
-api.setValue("Kakashi Sensei")
-api.submit()
-api.cancel()
-```
+<ApiTable name="editable" />
 
 ## Styling guide
 

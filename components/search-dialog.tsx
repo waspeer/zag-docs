@@ -86,46 +86,44 @@ export function Search() {
                   {results.map((item) => {
                     const isLvl1 = item.type === "lvl1"
                     return (
-                      <Link key={item.id} href={item.url} passHref>
-                        <a>
-                          <chakra.li
-                            px="3"
-                            py="1"
-                            _selected={{
-                              bg: "bg-primary-subtle",
-                            }}
-                            display="flex"
-                            alignItems="center"
-                            minHeight="14"
-                            key={item.url}
-                            {...combobox_api.getOptionProps({
-                              value: item.url,
-                              label: JSON.stringify(item),
-                            })}
-                          >
-                            <Icon
-                              as={isLvl1 ? HiDocument : HiHashtag}
-                              opacity={0.4}
-                            />
+                      <Link key={item.id} href={item.url}>
+                        <chakra.li
+                          px="3"
+                          py="1"
+                          _selected={{
+                            bg: "bg-primary-subtle",
+                          }}
+                          display="flex"
+                          alignItems="center"
+                          minHeight="14"
+                          key={item.url}
+                          {...combobox_api.getOptionProps({
+                            value: item.url,
+                            label: JSON.stringify(item),
+                          })}
+                        >
+                          <Icon
+                            as={isLvl1 ? HiDocument : HiHashtag}
+                            opacity={0.4}
+                          />
 
-                            <Box flex="1" ml="4">
-                              {!isLvl1 && (
-                                <Box
-                                  fontWeight="medium"
-                                  fontSize="xs"
-                                  opacity={0.7}
-                                >
-                                  {item.hierarchy.lvl1}
-                                </Box>
-                              )}
-                              <Box fontWeight="semibold">{item.content}</Box>
-                            </Box>
+                          <Box flex="1" ml="4">
+                            {!isLvl1 && (
+                              <Box
+                                fontWeight="medium"
+                                fontSize="xs"
+                                opacity={0.7}
+                              >
+                                {item.hierarchy.lvl1}
+                              </Box>
+                            )}
+                            <Box fontWeight="semibold">{item.content}</Box>
+                          </Box>
 
-                            <Icon opacity={0.4}>
-                              <GrReturn className="icon-gr-return" />
-                            </Icon>
-                          </chakra.li>
-                        </a>
+                          <Icon opacity={0.4}>
+                            <GrReturn className="icon-gr-return" />
+                          </Icon>
+                        </chakra.li>
                       </Link>
                     )
                   })}

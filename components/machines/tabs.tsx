@@ -20,7 +20,7 @@ export function Tabs(props: any) {
   const api = tabs.connect(state, send, normalizeProps)
 
   return (
-    <chakra.div width="full" maxW="400px" fontSize="sm">
+    <chakra.div width="full" maxW="400px" borderWidth="1px" fontSize="sm">
       <chakra.div bg="bg-subtle" borderBottomWidth="1px" {...api.tablistProps}>
         {data.map((item) => (
           <chakra.button

@@ -9,7 +9,7 @@ export const semanticTokens = {
     "bg-tertiary-bold": { default: "green.100", _dark: "green.900" },
     "bg-tertiary-subtle": { default: "green.50", _dark: "green.900" },
 
-    "bg-code-block": { default: "white", _dark: "gray.900" },
+    "bg-code-block": { default: "hsl(230, 1%, 98%)", _dark: "gray.900" },
     "bg-code-inline": { default: "blackAlpha.100", _dark: "whiteAlpha.100" },
     "bg-header": { default: "whiteAlpha.900", _dark: "rgba(26, 32, 44, 0.92)" },
     "bg-badge": { default: "orange.100", _dark: "orange.900" },

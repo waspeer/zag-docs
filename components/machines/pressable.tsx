@@ -43,6 +43,7 @@ export function Pressable(props: PressableProps) {
         px="4"
         py="3"
         w="28"
+        borderWidth="1px"
         bg="bg-subtle"
         _pressed={{
           bg: "bg-bold",

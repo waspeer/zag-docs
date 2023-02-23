@@ -48,8 +48,8 @@ The pressable package exports two key functions:
 - `connect` — The function that translates the machine's state to JSX attributes
   and event handlers.
 
-> You'll also need to provide a unique `id` to the `useMachine` hook. This is used
-> to ensure that every pressable has a unique identifier. Next, import the
+> You'll also need to provide a unique `id` to the `useMachine` hook. This is
+> used to ensure that every pressable has a unique identifier. Next, import the
 > required hooks and functions for your framework and use the pressable machine
 > in your project 🔥
 
@@ -71,15 +71,7 @@ const [state, send] = useMachine(
 
 The pressable's `api` provides helpful properties and methods
 
-| Property    | Description                              |
-| ----------- | ---------------------------------------- |
-| `isPressed` | Whether the target is currently pressed. |
-
-```js
-const api = connect(state, send)
-api.isPressed
-// false
-```
+<ApiTable name="pressable" />
 
 ## Handlers
 

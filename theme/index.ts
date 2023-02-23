@@ -1,4 +1,4 @@
-import foundations from "@chakra-ui/theme/foundations"
+import { foundations } from "@chakra-ui/theme/foundations"
 import { components } from "./components"
 import { globalStyles } from "./global-styles"
 import { layerStyles } from "./layer-styles"

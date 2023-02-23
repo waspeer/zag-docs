@@ -193,34 +193,7 @@ const [state, send] = useMachine(
 
 The number-input's `api` exposes the following methods:
 
-- `value` — The formatted value of the array.
-- `valueAsNumber` — The value of the input as number.
-- `setValue()` — Function used to set the a new value of the input.
-- `clearValue()` — Function used to clear the values.
-- `increment()` — Function used to increment the value.
-- `decrement()` — Function used to decrement the value.
-- `setToMax()` — Function used to set the value to the max.
-- `setToMin()` — Function used to set the value to the min.
-- `focus()` — Function used to focus the first input.
-
-```jsx
-const api = connect(state, send)
-
-api.value
-// => "12"
-
-api.valueAsNumber
-// => 12
-
-api.setValue("300")
-api.clearValue() // => new value: ""
-api.increment() // => new value: "1"
-api.decrement() // => new value: "0"
-
-api.setToMax() // => new value: "100"
-api.setToMin() // => new value: "0"
-api.focus()
-```
+<ApiTable name="number-input" />
 
 ## Styling guide
 

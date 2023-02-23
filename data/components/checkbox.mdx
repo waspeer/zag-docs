@@ -119,7 +119,7 @@ const [state, send] = useMachine(
 
 When the checkbox value changes, the `onChange` callback is invoked.
 
-```jsx {3-8}
+```jsx {3-6}
 const [state, send] = useMachine(
   checkbox.machine({
     onChange({ checked }) {
@@ -132,34 +132,9 @@ const [state, send] = useMachine(
 
 ## Methods and Properties
 
-The checkbox's `api` provides properties and methods you can use to
-programmatically read and set the checkbox's value.
+The checkbox's `api` provides properties and methods:
 
-| Property           | Description                                                     |
-| ------------------ | --------------------------------------------------------------- |
-| `isChecked`        | Whether the checkbox is checked                                 |
-| `isDisabled`       | Whether the checkbox is disabled                                |
-| `isIndeterminate`  | Whether the checkbox is indetermintae                           |
-| `isFocused`        | Whether the checkbox is focused                                 |
-| `isReadOnly`       | Whether the checkbox is readonly                                |
-| `view`             | Current visual state of checkbox, to ease rendering accordingly |
-| `setChecked`       | Function used to set the checked state.                         |
-| `setIndeterminate` | Function used to set the indeterminate state.                   |
-
-```js
-const api = connect(state, send)
-
-api.view
-// 'checked' | 'unchecked' | 'mixed'
-
-api.setChecked(true)
-api.isChecked
-// true
-
-api.setIndeterminate(true)
-api.isIndeterminate
-// true
-```
+<ApiTable name="checkbox" />
 
 ## Usage within forms
 

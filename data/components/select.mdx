@@ -215,31 +215,7 @@ const [state, send] = useMachine(
 
 The select's `api` exposes the following methods:
 
-- `isOpen` — Checks if the select is open.
-- `highlightedOption` - The highlighted option.
-- `selectedOption` - Selects an option.
-- `blur(...)` — Function to blur the select.
-- `focus(...)` — Function to focus the select.
-- `open(...)` — Function to open the select.
-- `close(...)` — Function to close the select.
-- `setSelectionOption(...)` — Function to set the selected option.
-- `setHighlightedOption(...)` — Function to set the highlighted option.
-
-```jsx
-api.isOpen // => boolean
-
-api.highlightedOption // => { label: string, value: string } | null
-
-api.selectedOption // => { label: string, value: string } | null
-
-api.blur() // => void
-
-api.focus() // => void
-
-api.setSelectionOption({ label: string, value: string }) // => void
-
-api.setHighlightedOption({ label: string, value: string }) // => void
-```
+<ApiTable name="select" />
 
 ## Styling guide
 

@@ -82,7 +82,7 @@ const [state, send] = useMachine(
 When the hover card is `opened` or `closed`, the `onOpenChange` callback is
 invoked.
 
-```jsx {3-8}
+```jsx {3-6}
 const [state, send] = useMachine(
   hoverCard.machine({
     onOpenChange(open) {
@@ -95,16 +95,7 @@ const [state, send] = useMachine(
 
 ## Methods and Properties
 
-| Property | Description                    |
-| -------- | ------------------------------ |
-| `isOpen` | Whether the hover card is open |
-
-```js
-const api = connect(state, send)
-
-api.isOpen
-// true | false
-```
+<ApiTable name="hover-card" />
 
 ## Styling guide
 

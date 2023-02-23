@@ -208,26 +208,7 @@ const [state, send] = useMachine(
 The range slider's `api` provides properties and methods you can use to
 programmatically read and set the slider's value.
 
-### Properties
-
-- `values`: The current value of the range slider (as an array)
-- `isDragging`: Whether a range-slider thumb is currently being dragged
-- `isFocused`: Whether a range-slider thumb is currently focused (and not
-  dragged)
-
-### Methods
-
-- `setValue`: Used to set the array value of the range slider
-- `getThumbValue`: Returns the value of the thumb at the specified index
-- `setThumbValue`: Used to set the value of a thumb at the specified index
-- `getThumbPercent`:Returns the percent value of the thumb at the specified
-  index
-- `getThumbMin`: Returns the minimum value of the thumb at the specified index
-- `getThumbMax`: Returns the maximum value of the thumb at the specified index
-- `increment`: Used to increment the value of the thumb at the specified index
-- `decrement`: Used to decrement the value of the thumb at the specified index
-- `focus`: Used to focus the thumb at the specified index
-- `blur`: Used to blur the currently focused thumb
+<ApiTable name="range-slider" />
 
 ## Styling guide
 

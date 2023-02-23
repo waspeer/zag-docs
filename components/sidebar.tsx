@@ -33,14 +33,14 @@ function DocLink(props: DocLinkProps) {
   const current = test(href.toString(), asPath)
   return (
     <Box key={asPath} as="li" fontSize="sm">
-      <Link href={href} passHref>
-        <chakra.a
-          aria-current={current ? "page" : undefined}
-          textStyle="sidebarLink"
-        >
-          {children}
-        </chakra.a>
-      </Link>
+      <chakra.a
+        as={Link}
+        href={href.toString()}
+        aria-current={current ? "page" : undefined}
+        textStyle="sidebarLink"
+      >
+        {children}
+      </chakra.a>
     </Box>
   )
 }

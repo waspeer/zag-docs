@@ -46,6 +46,7 @@ export function Menu(props) {
                 key={item.value}
                 _focus={{
                   bg: "bg-primary-bold",
+                  color: "white",
                 }}
                 {...api.getItemProps({ id: item.value })}
               >

@@ -1,7 +1,7 @@
-import { visit, Node } from "unist-util-visit"
+import { visit } from "unist-util-visit"
 import { h } from "hastscript"
 
-function isDirective(node: Node) {
+function isDirective(node: { type: string }) {
   return (
     node.type === "textDirective" ||
     node.type === "leafDirective" ||

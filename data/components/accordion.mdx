@@ -62,8 +62,8 @@ The accordion package exports two key functions:
 - `connect` — The function that translates the machine's state to JSX attributes
   and event handlers.
 
-> You'll also need to provide a unique `id` to the `useMachine` hook. This is used
-> to ensure that every part has a unique identifier.
+> You'll also need to provide a unique `id` to the `useMachine` hook. This is
+> used to ensure that every part has a unique identifier.
 
 Next, import the required hooks and functions for your framework and use the
 accordion machine in your project 🔥
@@ -163,23 +163,7 @@ const [state, send] = useMachine(
 
 The accordion's `api` exposes the following methods and properties:
 
-- `value` — The value of the currently selected accordion.
-- `setValue()` — The function used to set the value of the accordion that will
-  be expanded.
-- `getItemState()` — The function to check the state of an accordion item. It
-  returns an object containing `isOpen`, `isFocused`, `isDisabled`
-
-```jsx
-const api = connect(state, send)
-
-api.value
-// => "item-1"
-
-api.setValue("item-2")
-
-api.getItemState({ value: "item-2" })
-// => { isOpen: true, isFocused: false, isDisabled: false }
-```
+<ApiTable name="accordion" />
 
 ## Styling guide
 

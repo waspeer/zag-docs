@@ -96,14 +96,12 @@ export default function Home() {
             mb="12"
             spacing="5"
           >
-            <Link href="/overview/introduction" passHref>
-              <Button as="a" variant="green">
-                <HStack spacing="6">
-                  <span>Get Started</span>
-                  <Icon as={ArrowRightIcon} />
-                </HStack>
-              </Button>
-            </Link>
+            <Button as={Link} href="/overview/introduction" variant="green">
+              <HStack spacing="6">
+                <span>Get Started</span>
+                <Icon as={ArrowRightIcon} />
+              </HStack>
+            </Button>
             <Button hidden>
               <HStack spacing="2">
                 <Icon as={PlayIcon} />
@@ -135,11 +133,14 @@ export default function Home() {
             Zag provides the component API for the Web
           </chakra.h2>
 
-          <Link href="/overview/introduction" passHref>
-            <Button as="a" variant="black" width={{ base: "full", md: "auto" }}>
-              Get Started
-            </Button>
-          </Link>
+          <Button
+            as={Link}
+            href="/overview/introduction"
+            variant="black"
+            width={{ base: "full", md: "auto" }}
+          >
+            Get Started
+          </Button>
 
           <Stack
             direction={{ base: "column", lg: "row" }}
@@ -283,8 +284,8 @@ export default function Home() {
             <Circle overflow="hidden" bg="bg-bold">
               <Image
                 src="/segun-adebayo-headshot.png"
-                width="64px"
-                height="64px"
+                width="64"
+                height="64"
                 alt="Segun Adebayo"
               />
             </Circle>
@@ -316,15 +317,14 @@ export default function Home() {
           </chakra.h2>
 
           <Stack direction={{ base: "column", sm: "row" }} spacing="5">
-            <Link href="/overview/introduction" passHref>
-              <Button
-                as="a"
-                variant="black"
-                width={{ base: "full", md: "auto" }}
-              >
-                Get Started
-              </Button>
-            </Link>
+            <Button
+              as={Link}
+              href="/overview/introduction"
+              variant="black"
+              width={{ base: "full", md: "auto" }}
+            >
+              Get Started
+            </Button>
 
             <Button hidden width={{ base: "full", md: "auto" }}>
               <HStack spacing="2">

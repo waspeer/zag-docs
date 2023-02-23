@@ -24,32 +24,28 @@ export function Pagination(props: StackProps) {
       {...props}
     >
       {prev ? (
-        <Link href={prev.url} passHref>
-          <Box as="a" rel="prev" flex="1" textAlign="start">
-            <HStack spacing="1" color="text-bold">
-              <Icon as={HiChevronLeft} />
-              <span>Previous</span>
-            </HStack>
-            <Box color="green.500" fontWeight="semibold" fontSize="md" mt="1">
-              {prev.label}
-            </Box>
+        <Box as={Link} href={prev.url} rel="prev" flex="1" textAlign="start">
+          <HStack spacing="1" color="text-bold">
+            <Icon as={HiChevronLeft} />
+            <span>Previous</span>
+          </HStack>
+          <Box color="green.500" fontWeight="semibold" fontSize="md" mt="1">
+            {prev.label}
           </Box>
-        </Link>
+        </Box>
       ) : (
         <Box className="pagination__empty" flex="1" />
       )}
       {next ? (
-        <Link href={next.url} passHref>
-          <Box as="a" rel="next" flex="1" textAlign="end">
-            <HStack spacing="1" justify="flex-end" color="text-bold">
-              <span>Next</span>
-              <Icon as={HiChevronRight} />
-            </HStack>
-            <Box color="green.500" fontWeight="semibold" fontSize="md" mt="1">
-              {next.label}
-            </Box>
+        <Box as={Link} href={next.url} rel="next" flex="1" textAlign="end">
+          <HStack spacing="1" justify="flex-end" color="text-bold">
+            <span>Next</span>
+            <Icon as={HiChevronRight} />
+          </HStack>
+          <Box color="green.500" fontWeight="semibold" fontSize="md" mt="1">
+            {next.label}
           </Box>
-        </Link>
+        </Box>
       ) : (
         <Box className="pagination__empty" flex="1" />
       )}

@@ -103,6 +103,7 @@ export function Combobox(props: ComboboxProps) {
           width="300px"
           className="focus-outline"
           bg="bg-subtle"
+          borderWidth="1px"
           _disabled={{
             opacity: 0.6,
           }}
@@ -143,7 +144,7 @@ export function Combobox(props: ComboboxProps) {
                   display="flex"
                   alignItems="center"
                   cursor="pointer"
-                  _highlighted={{ bg: "bg-primary-subtle" }}
+                  _highlighted={{ bg: "bg-primary-subtle", color: "white" }}
                   _disabled={{
                     opacity: 0.5,
                     cursor: "unset",
