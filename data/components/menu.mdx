@@ -154,7 +154,7 @@ A common requirement for the option item that you pass the `name`, `value` and
 
 <CodeSnippet id="menu/option-items.mdx" />
 
-The machine invokes an `onValuesChange` callback when an radio or checkbox
+The machine invokes an `onValueChange` callback when an radio or checkbox
 option checked state changes. This callback is invoked with the `name` of the
 option and its new value.
 
@@ -162,7 +162,7 @@ option and its new value.
 const [state, send] = useMachine(
   menu.machine({
     values: { order: "", type: [] },
-    onValuesChange(data) {
+    onValueChange(data) {
       // data => { name: string, value: string | string[] }
       console.log("values changed", data.value)
     },
