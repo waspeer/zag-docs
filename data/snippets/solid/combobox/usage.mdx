@@ -4,8 +4,8 @@ import { normalizeProps, useMachine } from "@zag-js/solid"
 import { createMemo, createSignal, createUniqueId, For, Show } from "solid-js"
 
 const comboboxData = [
-  { label: "Zambia", code: "ZA" },
-  { label: "Benin", code: "BN" },
+  { label: "Zambia", code: "ZA", disabled: false },
+  { label: "Benin", code: "BN", disabled: false },
   //...
 ]
 
@@ -41,19 +41,20 @@ export function Combobox() {
       <div {...api().positionerProps}>
         <Show when={options().length > 0}>
           <ul {...api().contentProps}>
-            {options.map((item, index) => (
-              <li
-                key={`${item.code}:${index}`}
-                {...api().getOptionProps({
-                  label: item.label,
-                  value: item.code,
-                  index,
-                  disabled: item.disabled,
-                })}
-              >
-                {item.label}
-              </li>
-            ))}
+            <For each={options()}>
+              {(item, index) => (
+                <li
+                  {...api().getOptionProps({
+                    label: item.label,
+                    value: item.code,
+                    index: index(),
+                    disabled: item.disabled,
+                  })}
+                >
+                  {item.label}
+                </li>
+              )}
+            </For>
           </ul>
         </Show>
       </div>
